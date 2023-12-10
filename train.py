@@ -101,6 +101,7 @@ def train(args):
   
     prefix = ''
     f_prefix = '.'
+    # yy: onedrive 
     if args.drive is True:
       prefix='drive/semester_project/social_lstm_final/'
       f_prefix = 'drive/semester_project/social_lstm_final'
@@ -118,6 +119,7 @@ def train(args):
 
     # Create the data loader object. This object would preprocess the data in terms of
     # batches each of size args.batch_size, of length args.seq_length
+    # yy: 5,20,2
     dataloader = DataLoader(f_prefix, args.batch_size, args.seq_length, args.num_validation, forcePreProcess=True)
 
     model_name = "LSTM"

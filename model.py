@@ -27,9 +27,12 @@ class SocialModel(nn.Module):
             self.seq_length = args.seq_length
 
         # Store required sizes
+        # yy: 128
         self.rnn_size = args.rnn_size
+        # yy: 4 64
         self.grid_size = args.grid_size
         self.embedding_size = args.embedding_size
+        # yy: 2 5
         self.input_size = args.input_size
         self.output_size = args.output_size
         self.maxNumPeds=args.maxNumPeds
